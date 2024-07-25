@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner's Guide to JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+article {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+h2 {
+    color: #3498db;
+}
+
+ul, ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+pre {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+section p {
+    margin: 10px 0;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.roadmap {
+    margin-top: 20px;
+}
+
+.step {
+    position: relative;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background: #fff;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #3498db;
+}
+
+.step:first-child::before {
+    display: none;
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #3498db;
+}
+
+.step:last-child::after {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.footer {
+    background-color: #663399;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+  }
+ 
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  .footer .social-icons {
+    margin-top: 20px;
+  }
+  .footer .social-icons a {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0 10px;
+  }
+  .footer .social-icons a:hover {
+    color: #007bff;
+  }
+
+</style>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Beginner's Guide to JavaScript</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <article>
+            <header>
+                <h1>Beginner's Guide to JavaScript</h1>
+            </header>
+            <section>
+                <p>JavaScript is a versatile programming language essential for web development. It allows you to create interactive and dynamic web pages. This guide will walk you through the basics of JavaScript to get you started on your coding journey.</p>
+                
+                <h2>What is JavaScript?</h2>
+                <p>JavaScript is a high-level, interpreted programming language commonly used for adding interactivity to websites. It runs on the client-side (in the user's browser) and can also be used on the server-side with platforms like Node.js.</p>
+                
+                <h2>Setting Up Your Development Environment</h2>
+                <p>Before you start coding in JavaScript, you need a suitable development environment:</p>
+                <ul>
+                    <li><strong>Text Editor:</strong> Use a text editor like VS Code, Sublime Text, or Atom to write your code.</li>
+                    <li><strong>Browser:</strong> Modern browsers like Chrome, Firefox, or Edge come with developer tools for testing your code.</li>
+                    <li><strong>Local Server (Optional):</strong> For server-side JavaScript or complex projects, you might need a local server like XAMPP or WAMP.</li>
+                </ul>
+                
+                <h2>Basic JavaScript Syntax</h2>
+                <p>Here are some fundamental concepts to get you started with JavaScript:</p>
+                <ul>
+                    <li><strong>Variables:</strong> Used to store data. You can declare variables using <code>var</code>, <code>let</code>, or <code>const</code>.</li>
+                    <li><strong>Data Types:</strong> JavaScript supports various data types, including strings, numbers, booleans, arrays, and objects.</li>
+                    <li><strong>Functions:</strong> Functions allow you to encapsulate code into reusable blocks. You can define functions using the <code>function</code> keyword.</li>
+                    <li><strong>Events:</strong> JavaScript can respond to user actions like clicks and key presses using event listeners.</li>
+                </ul>
+                
+                <h2>Basic JavaScript Example</h2>
+                <pre><code>
+                    // This is a comment
+                    let message = 'Hello, world!';
+                    alert(message); // This will display an alert box with the message
+                </code></pre>
+                
+                <h2>Debugging Your JavaScript Code</h2>
+                <p>Debugging is a crucial skill. Use the browser’s developer tools to inspect code, set breakpoints, and monitor variables.</p>
+                
+                <h2>Resources to Learn More</h2>
+                <p>Here are some resources to help you continue learning JavaScript:</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN Web Docs - JavaScript</a></li>
+                    <li><a href="https://javascript.info/" target="_blank">JavaScript.info</a></li>
+                    <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+                </ul>
+            </section>
+    
+            <section class="roadmap">
+                <h2>JavaScript Learning Roadmap</h2>
+                <div class="step">Setup Development Environment</div>
+                <div class="step">Understand Basic Syntax</div>
+                <div class="step">Learn Variables and Data Types</div>
+                <div class="step">Explore Functions and Events</div>
+                <div class="step">Write and Debug Code</div>
+                <div class="step">Utilize Learning Resources</div>
+            </section>
+        </article>
+
+        <footer class="footer">
+            <div class="container">
+              <p>&copy; 2024 Mohak Agarwal. All Rights Reserved.</p>
+              <div class="social-icons">
+                <a href="https://github.com/your-github-profile" target="_blank" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank" title="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:your-email@example.com" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+1234567890" title="Phone">
+                  <i class="fas fa-phone"></i>
+                </a>
+              </div>
+              <p>
+                <a href="#home">Home</a> |
+                <a href="#about">About</a> |
+                <a href="#projects">Projects</a> |
+                <a href="#contact">Contact</a>
+              </p>
+            </div>
+          </footer>
+    </body>
+    </html>
+    

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding UI/UX Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+article {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+h2 {
+    color: #3498db;
+}
+
+ul, ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+section p {
+    margin: 10px 0;
+}
+
+.roadmap {
+    margin-top: 20px;
+}
+
+.step {
+    position: relative;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background: #fff;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #3498db;
+}
+
+.step:first-child::before {
+    display: none;
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #3498db;
+}
+
+.step:last-child::after {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.footer {
+    background-color: #663399;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  .footer .social-icons {
+    margin-top: 20px;
+  }
+  .footer .social-icons a {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0 10px;
+  }
+  .footer .social-icons a:hover {
+    color: #007bff;
+  }
+
+</style>
+<body>
+    <article>
+        <header>
+            <h1>Understanding UI/UX Design</h1>
+        </header>
+        <section>
+            <p>UI/UX design is crucial in creating engaging and user-friendly digital products. While UI (User Interface) and UX (User Experience) are often used interchangeably, they refer to different aspects of the design process. Here’s a comprehensive guide to understanding UI/UX design.</p>
+            
+            <h2>What is UI Design?</h2>
+            <p>User Interface (UI) design focuses on the look and feel of a product. It involves designing the visual elements that users interact with, such as buttons, icons, and layouts. UI design aims to create an aesthetically pleasing and intuitive interface that enhances the user’s interaction with the product.</p>
+            
+            <h2>What is UX Design?</h2>
+            <p>User Experience (UX) design is concerned with the overall experience a user has when interacting with a product. It encompasses the usability, accessibility, and pleasure derived from the interaction. UX design involves understanding user needs, creating wireframes, and ensuring that the product meets user expectations effectively.</p>
+            
+            <h2>Key Differences Between UI and UX Design</h2>
+            <ul>
+                <li><strong>Focus:</strong> UI design focuses on visual design, while UX design focuses on the user’s journey and experience.</li>
+                <li><strong>Process:</strong> UI design involves creating mockups and prototypes, whereas UX design involves user research, wireframing, and testing.</li>
+                <li><strong>Goals:</strong> UI design aims to create an attractive interface, while UX design aims to provide a seamless and enjoyable user experience.</li>
+            </ul>
+            
+            <h2>The UI/UX Design Process</h2>
+            <p>The UI/UX design process typically includes the following steps:</p>
+            <ol>
+                <li><strong>Research:</strong> Understanding user needs, market trends, and project goals.</li>
+                <li><strong>Wireframing:</strong> Creating low-fidelity prototypes to outline the structure and layout.</li>
+                <li><strong>Design:</strong> Developing high-fidelity designs with attention to visual elements and interactions.</li>
+                <li><strong>Testing:</strong> Conducting usability tests to gather feedback and make improvements.</li>
+                <li><strong>Implementation:</strong> Collaborating with developers to bring the design to life.</li>
+            </ol>
+            
+            <h2>Best Practices in UI/UX Design</h2>
+            <ul>
+                <li><strong>Simplicity:</strong> Keep designs clean and simple to enhance usability.</li>
+                <li><strong>Consistency:</strong> Use consistent design elements and patterns to create a cohesive experience.</li>
+                <li><strong>Accessibility:</strong> Ensure designs are accessible to all users, including those with disabilities.</li>
+                <li><strong>User-Centric Design:</strong> Prioritize user needs and feedback throughout the design process.</li>
+            </ul>
+        </section>
+
+        <section class="roadmap">
+            <h2>UI/UX Design Process Roadmap</h2>
+            <div class="step">Research</div>
+            <div class="step">Wireframing</div>
+            <div class="step">Design</div>
+            <div class="step">Testing</div>
+            <div class="step">Implementation</div>
+        </section>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+          <p>&copy; 2024 Mohak Agarwal. All Rights Reserved.</p>
+          <div class="social-icons">
+            <a href="https://github.com/your-github-profile" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:your-email@example.com" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+1234567890" title="Phone">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+          <p>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#contact">Contact</a>
+          </p>
+        </div>
+      </footer>
+</body>
+</html>

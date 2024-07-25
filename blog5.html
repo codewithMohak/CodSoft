@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid vs. Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+article {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+h2 {
+    color: #3498db;
+}
+
+h3 {
+    color: #2c3e50;
+}
+
+ul, ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+pre {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+section p {
+    margin: 10px 0;
+}
+
+code {
+    background: #f4f4f4;
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-size: 0.9em;
+}
+
+.roadmap {
+    margin-top: 20px;
+}
+
+.step {
+    position: relative;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background: #fff;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #3498db;
+}
+
+.step:first-child::before {
+    display: none;
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #3498db;
+}
+
+.step:last-child::after {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.footer {
+    background-color: #663399;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  .footer .social-icons {
+    margin-top: 20px;
+  }
+  .footer .social-icons a {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0 10px;
+  }
+  .footer .social-icons a:hover {
+    color: #007bff;
+  }
+
+</style>
+<body>
+    <article>
+        <header>
+            <h1>CSS Grid vs. Flexbox</h1>
+        </header>
+        <section>
+            <p>CSS Grid and Flexbox are two powerful layout systems that make designing responsive and complex layouts easier. Understanding the strengths and use cases of each can help you choose the right tool for your projects. Let’s explore CSS Grid and Flexbox and compare their features.</p>
+            
+            <h2>What is CSS Grid?</h2>
+            <p>CSS Grid Layout is a two-dimensional layout system for creating complex grid-based designs. It allows you to define rows and columns, and position items within these grid areas. CSS Grid is ideal for creating layouts with both rows and columns.</p>
+            
+            <h3>Key Features of CSS Grid:</h3>
+            <ul>
+                <li><strong>Two-Dimensional Layout:</strong> Supports both horizontal and vertical alignment.</li>
+                <li><strong>Grid Lines:</strong> Allows you to place items based on grid lines.</li>
+                <li><strong>Explicit and Implicit Grid:</strong> Define both explicit grid areas and automatically created grid areas.</li>
+                <li><strong>Alignment:</strong> Provides advanced alignment and spacing options for grid items.</li>
+            </ul>
+            
+            <h2>What is Flexbox?</h2>
+            <p>Flexbox (Flexible Box Layout) is a one-dimensional layout system for aligning items in a single direction (row or column). It is designed to distribute space along a single axis and is great for building layouts where items need to be flexible and responsive.</p>
+            
+            <h3>Key Features of Flexbox:</h3>
+            <ul>
+                <li><strong>One-Dimensional Layout:</strong> Align items along a single axis (row or column).</li>
+                <li><strong>Flex Items:</strong> Flex items can grow, shrink, and adjust their size based on available space.</li>
+                <li><strong>Alignment:</strong> Align items along the main and cross axes with simple properties.</li>
+                <li><strong>Ordering:</strong> Change the order of items easily with the <code>order</code> property.</li>
+            </ul>
+            
+            <h2>When to Use CSS Grid vs. Flexbox</h2>
+            <p>Choosing between CSS Grid and Flexbox depends on your layout needs:</p>
+            <ul>
+                <li><strong>Use CSS Grid:</strong> When you need a complex layout with both rows and columns, or when you want to create a layout that spans multiple areas.</li>
+                <li><strong>Use Flexbox:</strong> When you need a simple layout in a single direction, or when you want flexible items that adjust to their container's size.</li>
+            </ul>
+            
+            <h2>Example Comparisons</h2>
+            <p>Here are simple examples comparing CSS Grid and Flexbox:</p>
+            <h3>CSS Grid Example</h3>
+            <pre><code>
+                .container {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 10px;
+                }
+                
+                .item {
+                    background: #ddd;
+                    padding: 20px;
+                }
+            </code></pre>
+            
+            <h3>Flexbox Example</h3>
+            <pre><code>
+                .container {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                
+                .item {
+                    background: #ddd;
+                    padding: 20px;
+                }
+            </code></pre>
+        </section>
+
+        <section class="roadmap">
+            <h2>CSS Grid vs. Flexbox Roadmap</h2>
+            <div class="step">Understand CSS Grid</div>
+            <div class="step">Learn Flexbox</div>
+            <div class="step">Compare Features</div>
+            <div class="step">Choose Based on Layout Needs</div>
+            <div class="step">Practice with Examples</div>
+        </section>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+          <p>&copy; 2024 Mohak Agarwal. All Rights Reserved.</p>
+          <div class="social-icons">
+            <a href="https://github.com/your-github-profile" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:your-email@example.com" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+1234567890" title="Phone">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+          <p>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#contact">Contact</a>
+          </p>
+        </div>
+      </footer>
+</body>
+</html>

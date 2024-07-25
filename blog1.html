@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Start with Web Development</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+article {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+h2 {
+    color: #3498db;
+}
+
+h3 {
+    color: #2c3e50;
+}
+
+ul, ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+section p {
+    margin: 10px 0;
+}
+
+code {
+    background: #f4f4f4;
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-size: 0.9em;
+}
+
+.roadmap {
+    margin-top: 20px;
+}
+
+.step {
+    position: relative;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background: #fff;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #3498db;
+}
+
+.step:first-child::before {
+    display: none;
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #3498db;
+}
+
+.step:last-child::after {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.footer {
+    background-color: #663399;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  .footer .social-icons {
+    margin-top: 20px;
+  }
+  .footer .social-icons a {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0 10px;
+  }
+  .footer .social-icons a:hover {
+    color: #007bff;
+  }
+
+</style>
+<body>
+    <article>
+        <header>
+            <h1>How to Start with Web Development</h1>
+        </header>
+        <section>
+            <p>Starting with web development can be both exciting and overwhelming due to the vast array of technologies and tools available. This guide will provide a structured approach to help you begin your journey in web development.</p>
+            
+            <h2>1. Learn the Basics of HTML</h2>
+            <p>HTML (Hypertext Markup Language) is the foundation of web development. It defines the structure and content of a web page. Start by learning the basic HTML elements, such as headings, paragraphs, links, images, and lists.</p>
+            
+            <h3>Key HTML Concepts:</h3>
+            <ul>
+                <li><strong>HTML Document Structure:</strong> Understand the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> elements.</li>
+                <li><strong>Text Formatting:</strong> Learn to use <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings and <code>&lt;p&gt;</code> for paragraphs.</li>
+                <li><strong>Links and Images:</strong> Use <code>&lt;a&gt;</code> for hyperlinks and <code>&lt;img&gt;</code> for images.</li>
+                <li><strong>Lists:</strong> Create ordered and unordered lists with <code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code>.</li>
+            </ul>
+            
+            <h2>2. Style Your Website with CSS</h2>
+            <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It allows you to apply colors, fonts, spacing, and layout styles to your HTML elements. Start with basic CSS properties and gradually move to more advanced techniques.</p>
+            
+            <h3>Key CSS Concepts:</h3>
+            <ul>
+                <li><strong>Selecting Elements:</strong> Use class, ID, and element selectors to target HTML elements.</li>
+                <li><strong>Styling Text:</strong> Learn to style fonts, colors, and text alignment.</li>
+                <li><strong>Box Model:</strong> Understand margin, border, padding, and content.</li>
+                <li><strong>Layouts:</strong> Explore layout techniques using display properties and positioning.</li>
+            </ul>
+            
+            <h2>3. Add Interactivity with JavaScript</h2>
+            <p>JavaScript is a programming language that adds interactivity to your web pages. You can use it to create dynamic content, handle events, and validate forms. Begin with basic JavaScript concepts and build up to more complex functionalities.</p>
+            
+            <h3>Key JavaScript Concepts:</h3>
+            <ul>
+                <li><strong>Variables and Data Types:</strong> Learn about different data types and how to use variables.</li>
+                <li><strong>Functions:</strong> Understand how to create and use functions to perform tasks.</li>
+                <li><strong>Events:</strong> Handle user interactions and events like clicks and keypresses.</li>
+                <li><strong>DOM Manipulation:</strong> Learn to interact with and modify the HTML document using the DOM (Document Object Model).</li>
+            </ul>
+            
+            <h2>4. Build Your First Project</h2>
+            <p>Once you have a basic understanding of HTML, CSS, and JavaScript, start building your first project. It could be a simple webpage, a personal portfolio, or a small interactive application. Apply the skills you’ve learned to create something functional and visually appealing.</p>
+            
+            <h3>Project Ideas:</h3>
+            <ul>
+                <li><strong>Personal Portfolio:</strong> Showcase your skills, projects, and achievements.</li>
+                <li><strong>Landing Page:</strong> Create a promotional landing page for a product or service.</li>
+                <li><strong>Interactive Quiz:</strong> Develop a quiz with interactive features and feedback.</li>
+            </ul>
+            
+            <h2>5. Keep Learning and Practicing</h2>
+            <p>Web development is an ever-evolving field, so it’s important to keep learning and practicing. Stay updated with the latest trends, tools, and technologies. Join online communities, participate in forums, and work on new projects to continue growing your skills.</p>
+        </section>
+
+        <section class="roadmap">
+            <h2>Web Development Roadmap</h2>
+            <div class="step">Learn HTML Basics</div>
+            <div class="step">Style with CSS</div>
+            <div class="step">Add Interactivity with JavaScript</div>
+            <div class="step">Build Your First Project</div>
+            <div class="step">Keep Learning and Practicing</div>
+        </section>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+          <p>&copy; 2024 Mohak Agarwal. All Rights Reserved.</p>
+          <div class="social-icons">
+            <a href="https://github.com/your-github-profile" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:your-email@example.com" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+1234567890" title="Phone">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+          <p>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#contact">Contact</a>
+          </p>
+        </div>
+      </footer>
+</body>
+</html>
